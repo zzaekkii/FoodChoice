@@ -1,0 +1,121 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredericka+the+Great&family=Gowun+Batang&family=Grape+Nuts&family=Indie+Flower&family=Wallpoet&display=swap');
+@import "reset.css";
+@font-face {
+    font-family: 'Vitro_core';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+}
+
+/* 헤더, 네비 */
+header{
+    width: 100%;
+    height: 15%;
+    /* 크기 보려고 임시로 해놓은 것 */
+    /* background: rgba(255, 255, 255, .1); */
+    position: fixed;
+    top: 10px; left: 0px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header div{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+#logo {
+    font: bold 35px/1 "Grape Nuts";
+    color: #FF7A7A;
+    text-shadow: 0px 0px 20px #FF7A7A;
+}
+nav{
+    display: flex;
+}
+#gnb {
+    display: flex;
+}
+#gnb li {
+    margin: 0px 40px;
+}
+#gnb li a{
+    font: bold 20px/1 "Vitro_core";
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 5px rgba(9, 9, 9, 0.5);
+}
+#logo:hover{
+    color: rgb(255, 214, 214);
+    text-shadow: 0px 0px 20px #FF7A7A;
+}
+#gnb li a:hover{
+    color: rgb(255, 214, 214);
+    text-shadow: 0px 0px 20px #FF7A7A;
+}
+
+
+figure{
+    width: 100%;
+    height: 100vh;
+    top: 0px; left: 0px;
+    overflow: hidden;
+}
+figure video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.mid{
+    position: absolute;
+    left: 7vw;
+    top: 30%;
+    transform: translate(0%);
+}
+.mid-intro{
+    display: inline-block;
+    font: italic 50px/1.5 "Vitro_core";
+    color: white;
+    text-shadow: 0px 0px 5px rgba(9, 9, 9, 0.5);
+}
+.mid-intro span{
+    color: #FF7A7A;
+}
+.bot{
+    position: absolute;
+    right: 4vw;
+    bottom: 8%;
+    transform: translate(0%);
+}
+.bot-install{
+    display: inline-block;
+    margin-bottom: 10px;
+    font: italic 25px/1.5"Vitro_core";
+    color: white;
+    text-shadow: 0px 0px 5px rgba(9, 9, 9, 0.5);
+}
+.bot-install span{
+    color: #FF7A7A;
+}
+.bot-img div {
+    display: flex;
+    justify-content: space-between;
+}
+.bot-img img{
+    width: 200px;
+    border-radius: 40px;
+}
