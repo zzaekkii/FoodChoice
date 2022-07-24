@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 프리뷰 사이트 정보 -->
+    <meta property="og:title" content="푸쵸(FooCho)">
+    <meta property="og:description" content="뭘 먹을지 고민된다면 푸쵸~!">
+    <!-- <meta property="og:image" content=""> -->
+    <title>Food Choice, 푸쵸</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 파비콘 - 임시적으로 해놓은 것. 나중에 변경예정 -->
+    <link rel="icon" href="./photo/temp.png">
+    <!-- <script src="https://kit.fontawesome.com/a5302adcbb.js" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <div>
+            <!-- 로고 -->
+            <a id="logo" href="#">FoodChoice</a>
+            <!-- 메뉴 바 -->
+            <nav>
+                <ul id="gnb">
+                    <li><a href="#">이용 방법</a></li>
+                    <li><a href="#">고객 센터</a></li>
+                    <li><a href="#">마이 페이지</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 영상 백그라운드 -->
+    <figure>
+        <!-- 영상 -->
+        <div>
+            <video id="home-vd" src="./photo/main.mp4" autoplay loop muted></video>
+        </div>
+        <!-- 타이틀 -->
+        <div class="mid">
+            <p class="mid-intro">이번 한 끼, <span>푸쵸</span>를 통해<br>
+                최적의 메뉴를 찾아보세요!</p>
+        </div>
+        <!-- 앱 스토어 -->
+        <div class="bot">
+            <p class="bot-install">모바일 App으로 어디서나 <span>푸쵸</span>하세요!</p>
+            <div class="bot-img">
+                <div>
+                    <!-- 앱 배포 후 수정 -->
+                    <a href="https://www.apple.com/kr/app-store/" target="_blank"><img src="./photo/AppStore.png" alt="AppStore"></a>
+                    <a href="https://play.google.com/store/games?hl=ko" target="_blank"><img src="./photo/PlayStore.png" alt="PlayStore"></a>
+                </div>
+            </div>
+        </div>
+    </figure>
+
+    <!-- 메인 영역 -->
+    <main></main>
+
+    <!-- 푸쵸 제작사 정보 -->
+    <footer></footer>
+
+    <!-- 버거 메뉴 -->
+    <div class="burger"></div>
+    <!-- 버거 메뉴 시 다른 영역 그림자 -->
+    <div class="shadow"></div>
+</body>
+</html>
