@@ -11,7 +11,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    width: 100%;
+    width: 100vw;
     height: auto;
     display: flex;
     justify-content: center;
@@ -66,15 +66,24 @@ nav{
 }
 
 main{
-    position:relative;
-    top: 180px;
+    width: 100vw;
+    height: 100vh;
+    perspective: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main div{
+    /* position:relative; */
     width: 100%;
     height: auto;
+    transform: translateZ(-100px);
     overflow: hidden;
     display: flex;
     flex-direction: column;
 }
-#dummy1{
+.dummy1{
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -82,20 +91,14 @@ main{
     align-items: flex-end;
 }
 
-#dummy2{
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-end;
-}
-#dummy1 p{
+.dummy1 p{
     color: beige;
     font: normal 39px "Vitro_core";
     margin-bottom: 20px;
 }
 #before,#next{
-    margin-bottom: 42px;
+    /* margin-bottom: 42px; */
+    text-align: center;
     line-height: 400px;
     width: 100px;
     height: 440px;
@@ -107,6 +110,7 @@ main{
     background-color: white;
     border-radius: 60px;
 }
+
 #option{
     font: bold 30px "Vitro_core";
     text-align: center;
@@ -117,23 +121,43 @@ main{
     width: 290px;
     background-color: rgb(41, 62, 109);
 }
-/*
-#dummy2 li{
-    list-style: none;
-    float: left;
-    margin: 30px;
-}*/
-/*li바꾸기*/
-/*
-@media screen and(max-width:800px) {
-    #dummy2 li{
-        float: none;
-    }
+
+.dummy2{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
 }
+
 /*dummy2 바꾸기*/
-/*@media screen and(max-width:800px){
-    #dummy2{
+@media screen and (max-width: 1024px){
+    main{
+        perspective: 500px;
+    }
+    main div{
+        transform: translateZ(-200px);
+    }
+
+    #gnb{
+        display: none;
+    }
+
+    .dummy2{
         display: flex;
         flex-direction: column;
+        align-items: center;
     }
-}*/
+    .dummy2 a{
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    main{
+        perspective: 500px;
+    }
+    main div{
+        transform: translateZ(-200px);
+    }
+}
