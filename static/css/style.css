@@ -1,0 +1,175 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Fredericka+the+Great&family=Gowun+Batang&family=Grape+Nuts&family=Indie+Flower&family=Wallpoet&display=swap');
+@import "./reset.css";
+@font-face {
+    font-family: 'Vitro_core';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Vitro_core.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: black;
+    position: relative;
+}
+
+/* 헤더, 네비 */
+header{
+    width: 100%;
+    height: 15%;
+    /* 크기 보려고 임시로 해놓은 것 */
+    /* background: rgba(255, 255, 255, .1); */
+    position: fixed;
+    top: 10px; left: 0px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header div{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+#logo {
+    font: bold 35px/1 "Grape Nuts";
+    color: #FF7A7A;
+    text-shadow: 0px 0px 20px #FF7A7A;
+}
+nav, #gnb, .burger {
+    display: flex;
+}
+#gnb li {
+    margin: 0px 40px;
+}
+#gnb li a{
+    font: bold 20px/1 "Vitro_core";
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 5px rgba(9, 9, 9, 0.5);
+}
+#gnb li:first-child a{
+    color: #FF7A7A;
+    animation: aa linear 2s infinite
+}
+@keyframes aa {
+    70%{color: white;}
+}
+#logo:hover{
+    color: rgb(255, 214, 214);
+    text-shadow: 0px 0px 20px #FF7A7A;
+}
+#gnb li a:hover, .burger:hover{
+    color: rgb(255, 214, 214);
+    text-shadow: 0px 0px 20px #FF7A7A;
+}
+.burger {
+    width: auto;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+
+figure{
+    width: 100%;
+    height: 720px;
+    position: absolute;
+    top: 0px; left: 0px;
+    overflow: hidden;
+}
+figure video{
+    width: 1600px;
+    height: auto;
+    object-fit: cover;
+    overflow: hidden;
+}
+.mid{
+    position: absolute;
+    left: 7%;
+    top: 30%;
+    transform: translate(0%);
+}
+.mid-intro{
+    display: inline-block;
+    font: italic 50px/1.5 "Vitro_core";
+    color: white;
+    text-shadow: 0px 0px 5px rgba(9, 9, 9, 0.5);
+}
+.mid-intro span{
+    color: #FF7A7A;
+}
+.bot{
+    position: absolute;
+    right: 4%;
+    bottom: 8%;
+    transform: translate(0%);
+}
+.bot-install{
+    display: inline-block;
+    margin-bottom: 10px;
+    font: italic 25px/1.5"Vitro_core";
+    color: white;
+    text-shadow: 0px 0px 5px rgba(9, 9, 9, 0.5);
+}
+.bot-install span{
+    color: #FF7A7A;
+}
+.bot-img div {
+    display: flex;
+    justify-content: space-between;
+}
+.bot-img img{
+    width: 200px;
+    border-radius: 40px;
+    transition: .6s;
+}
+.bot-img img:hover {
+    filter: invert(100%);
+}
+
+
+@media screen and (max-width: 1024px){
+    #gnb{
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+    figure video{
+        width: 1300px;
+        transform: translateX(-100px);
+    }
+    .mid-intro{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 600px){
+    figure video{
+        transform: translateX(-400px);
+    }
+    .mid-intro{
+        font-size: 30px;
+    }
+    .bot-install{
+        font-size: 18px;
+    }
+    .bot-img img{
+        width: 150px;
+    }
+}
+@media screen and (max-width: 400px){
+    .mid-intro{
+        font-size: 25px;
+    }
+}
