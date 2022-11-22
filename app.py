@@ -44,7 +44,7 @@ def result():
     query = "SELECT foodname FROM food WHERE "
     for i in range(0, 19):
         if choice_list[i] == "2":
-            query += f"{option_list[i][0]}=0 OR {option_list[i][0]}=1 AND "
+            query += f"({option_list[i][0]}=0 OR {option_list[i][0]}=1) AND "
         else:
             query += f"{option_list[i][0]}={choice_list[i]} AND "
     query = query[:-5]
@@ -122,4 +122,4 @@ def controller(option):
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port="8080")
+    app.run(host="0.0.0.0", port="5252")
