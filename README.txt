@@ -16,3 +16,8 @@
 
 => 사용자들의 이용 결과에 따라 최초에 뜨는 메뉴가 바뀜.
 
+## how to use
+
+```sh
+docker-compose up -d
+```
