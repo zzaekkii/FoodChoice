@@ -8,4 +8,4 @@ services:
       dockerfile: ./Dockerfile
     ports:
       - "8080:8080"
-    command: python3 db.py && python3 app.py
+    command: sh -c "python3 /app/db.py && python3 /app/app.py"

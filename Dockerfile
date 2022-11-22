@@ -3,4 +3,4 @@ FROM python:3.8
 COPY . /app
 WORKDIR /app
 
-RUN pip3 install flask sqlite3
+RUN pip3 install flask
