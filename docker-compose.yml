@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  app:
+    container_name: foocho-app
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8080:8080"
+    command: python3 db.py && python3 app.py
