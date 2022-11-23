@@ -149,7 +149,7 @@ main div{
 /*dummy2 바꾸기*/
 @media screen and (max-width: 1024px){
     main{
-        perspective: 500px;
+        perspective: 400px;
     }
     main div{
         transform: translateZ(-200px);
@@ -157,6 +157,10 @@ main div{
 
     #gnb{
         display: none;
+    }
+    
+    #photo{
+        width: 100%;
     }
 
     .answer{
