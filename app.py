@@ -44,7 +44,7 @@ def result():
     query = "SELECT foodname FROM food WHERE "
     for i in range(0, 19):
         if choice_list[i] == "2":
-            query += f"({option_list[i][0]}=0 OR {option_list[i][0]}=1) AND "
+            query += f"({option_list[i][0]}=0 OR {option_list[i][0]}=1 OR {option_list[i][0]}=2) AND "
         else:
             query += f"{option_list[i][0]}={choice_list[i]} AND "
     query = query[:-5]
